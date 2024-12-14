@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopCart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="cart-container">
+    <h1 class="cart-title">Your Shopping Cart</h1>
+    
+    <div class="cart-item">
+      <div class="product-details">
+        <span class="product-name">Product 1</span>
+        <span class="product-price">$25.00</span>
+      </div>
+      <div class="quantity-controls">
+        <button class="quantity-btn" onclick="changeQuantity('product1', -1)">-</button>
+        <input type="number" id="product1" class="quantity" value="1" readonly />
+        <button class="quantity-btn" onclick="changeQuantity('product1', 1)">+</button>
+      </div>
+    </div>
+
+    <div class="cart-item">
+      <div class="product-details">
+        <span class="product-name">Product 2</span>
+        <span class="product-price">$15.00</span>
+      </div>
+      <div class="quantity-controls">
+        <button class="quantity-btn" onclick="changeQuantity('product2', -1)">-</button>
+        <input type="number" id="product2" class="quantity" value="1" readonly />
+        <button class="quantity-btn" onclick="changeQuantity('product2', 1)">+</button>
+      </div>
+    </div>
+
+    <!-- Total Section -->
+    <div class="checkout-section">
+      <div class="total-cost">
+        <span>Total: </span><span id="total-cost">$40.00</span>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
